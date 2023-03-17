@@ -3,7 +3,7 @@
 /**
  * main - Run a program of differnt size of compile computer
  *
- * Return: zero  success
+ * Return: zero
  */
 int main(void)
 {
