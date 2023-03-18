@@ -3,17 +3,15 @@
 /**
  * main - printing lowercase alphabets except q and e
  *
- * Return: Always 1 success
+ * Return: Always 0 success
  */
 int main(void)
 {
-	char m;
+	char c;
 
-	m = 'a';
-while (m <= 'z')
-	if (m != 'q' && m != 'e')
-		putchar(m);
-		m++;
-		putchar('\n');
+	for (c = 'a' ; c <= 'z' ; ++c)
+		if (c != 'q' && c != 'e')
+			putchar(c);
+	putchar('\n');
 	return (0);
 }
