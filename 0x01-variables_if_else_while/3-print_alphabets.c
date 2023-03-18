@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - prints alphabets in lowercase then in uppercase
+ * main - printing alphabets in lowercase and upercase
  *
- * Return: Always 1 successs
+ * Return: Always 1 success
  */
 int main(void)
 {
@@ -13,15 +13,13 @@ int main(void)
 while (k <= 'z')
 {
 	putchar(k);
-}
 	k++;
+}
 while (l <= 'Z')
 {
 	putchar(l);
-}
 	l++;
+}
 	putchar('\n');
 return (0);
 }
-
-
