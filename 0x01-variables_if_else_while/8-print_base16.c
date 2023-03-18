@@ -10,7 +10,7 @@ int main(void)
 	int n = 0;
 	char p = 'a';
 
-while (n <= 10)
+while (n <= 9)
 {
 	putchar(n + '0');
 	n++;
