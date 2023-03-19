@@ -10,6 +10,7 @@ int main(void)
 	int m;
 	int n;
 	int o;
+	int count = 0;
 
 for (m = 0 ; m < 10 ; m++)
 {
@@ -20,8 +21,12 @@ for (m = 0 ; m < 10 ; m++)
 			putchar(m + '0');
 			putchar(n + '0');
 			putchar(o + '0');
+			count++;
+			if (count < 120)
+			{
 			putchar(',');
 			putchar(' ');
+			}
 		}
 	}
 }
