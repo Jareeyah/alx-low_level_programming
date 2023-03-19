@@ -11,7 +11,7 @@ int main(void)
 	int n;
 
 	for (m = 0 ; m < 100 ; m++)
-		for (n = m + 1 ; n < 100 ; n++)
+		for (n = 0 ; n < 100 ; n++)
 	{
 			putchar((m / 10) + '0');
 			putchar((m % 10) + '0');
