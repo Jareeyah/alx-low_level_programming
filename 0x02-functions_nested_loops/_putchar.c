@@ -1,11 +1,14 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
- * main - check your code
+ * _putchar - writes character m to stdout
+ * @m: The character to print
  *
- * Return: Always 0
+ * Return: Always 1
+ * On error -1 is returned, and errno is set appropriately
  */
-int main(void)
+int _putchar(char m)
 {
-	return(0);
+	return (write(1, &m, 1));
 }
