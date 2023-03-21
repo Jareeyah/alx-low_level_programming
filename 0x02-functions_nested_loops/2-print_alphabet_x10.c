@@ -1,12 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_alphabet_x10 - fuction that prints alphabets 10 times
+ * main - fuction that prints alphabets 10 times
  *
- * Return: Always 0
+ * Return: 0
  */
-void print_alphabet_x10(void)
+int main(void)
 {
 	int count = 0;
 	char letter;
