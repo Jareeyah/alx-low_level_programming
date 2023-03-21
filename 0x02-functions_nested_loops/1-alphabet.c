@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
- * print_alphabet - a function that prints lowecase alphaets
+ * print_alphabet - print lowecase alphabets
  *
- * Return: always 0 success
+ * Return: Always 0
  */
-
 void print_alphabet(void)
-
 {
 	char letter = 'a';
 
@@ -16,5 +14,5 @@ void print_alphabet(void)
 		_putchar(letter);
 	}
 	_putchar('\n');
-		return (0);
+	return (0);
 }
