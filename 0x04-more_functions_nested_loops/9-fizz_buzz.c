@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - a program that prints from 0 to 100
- * Return: Always 0
+ * Return: Always 0 success
  */
 int main(void)
 {
@@ -26,6 +27,7 @@ int main(void)
 		{
 			printf("%d", z);
 		}
+		if (z < 100)
 		printf(" ");
 	}
 	printf("\n");
