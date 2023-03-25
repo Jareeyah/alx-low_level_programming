@@ -13,5 +13,6 @@ void print_square(int size);
 void print_triangle(int size);
 int _putchar(char i);
 void fizz_buzz(void);
+void print_number(int n);
 
 #endif
