@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	char s[] = "Expect the best. Prepare for the worst.";
-	char s[] =  "Capitalize on what comes.\n";
-	char *p;
+char s[] = "Expect the best. Prepare for the worst.\n"
+"Capitalize on what comes.\n";
+char *p;
 
 	p = leet(s);
 	printf("%s", p);
