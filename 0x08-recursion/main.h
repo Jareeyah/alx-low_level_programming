@@ -10,5 +10,6 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _putchar(char c);
 int natural_sqrt_number(int n, int s);
+int real_number(int n, int p);
 
 #endif
