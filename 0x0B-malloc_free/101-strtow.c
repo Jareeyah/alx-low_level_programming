@@ -8,17 +8,20 @@
  */
 int word_string(char *str)
 {
-	int w, r, d = 0;
+	int w = 0, r = 0;
 
-	for (w = 0 ; str[w] != '\0' ; w++)
+	while (*str != '\0')
 	{
-		if (str[w] == ' ')
+		if (*str == ' ')
 			r = 0;
-		else if (r == 0)
-			r = 1;
-		d++;
+		else if (!r)
+		{
+			w++;
+		r = 1;
+		}
+	str++;
 	}
-	return (d);
+	return (w);
 }
 /**
  * strtow - function that splits a string into words
@@ -49,9 +52,7 @@ char **strtow(char *str)
 				n = o;
 				l = (char *) malloc((m + 1) * sizeof(char));
 				if (l == NULL)
-				{
 					return (NULL);
-				}
 				while (c < n)
 				*l++ = str[c++];
 				*l = '\0';
