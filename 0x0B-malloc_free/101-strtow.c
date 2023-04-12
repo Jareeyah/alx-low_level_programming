@@ -28,15 +28,13 @@ int word_string(char *str)
 char **strtow(char *str)
 {
 	char **ptr, *l;
-	int s, t, o, w, c, a = 0, r = 0;
+	int s, t, o, n, c, a = 0, m = 0;
 
 	while (*(str + s))
 		s++;
 	t = word_string(str);
 	if (t == 0)
-	{
 		return (NULL);
-	}
 	ptr = (char **) malloc((t + 1) * sizeof(char *));
 	if (ptr == NULL)
 	{
@@ -46,23 +44,23 @@ char **strtow(char *str)
 	{
 		if (str[o] == ' ' || str[o] == '\0')
 		{
-			if (r)
+			if (m)
 			{
-				w = o;
-				l = (char *) malloc((r + 1) * sizeof(char));
+				n = o;
+				l = (char *) malloc((m + 1) * sizeof(char));
 				if (l == NULL)
 				{
 					return (NULL);
 				}
-				while (c < w)
+				while (c < n)
 				*l++ = str[c++];
 				*l = '\0';
-				ptr[a] = l - r;
+				ptr[a] = l - m;
 				a++;
-				r = 0;
+				m = 0;
 			}
 		}
-		else if (r++ == 0)
+		else if (m++ == 0)
 			c = o;
 	}
 	ptr[a] = NULL;
