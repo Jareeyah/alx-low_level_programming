@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * create_file - A function that creates a file
@@ -11,7 +10,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int c;
 	int f;
-	int t;
+	int t = 0;
 
 	if (filename == NULL)
 	{
@@ -26,9 +25,7 @@ int create_file(const char *filename, char *text_content)
 	f = write(c, text_content, t);
 
 	if (c == -1 || f == -1)
-	{
 		return (-1);
-	}
 	close(c);
 	return (1);
 }
