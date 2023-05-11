@@ -9,9 +9,9 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int c = -1;
+	int c;
 	int f;
-	int t = 0;
+	int t;
 
 	if (filename == NULL)
 	{
@@ -19,21 +19,15 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content != NULL)
 	{
-		c = open(filename, O_CREAT | O_RDWR | O_TRUNC, 600);
-		if (c == -1)
-		{
-			return (-1);
-		}
-		while (text_content[t])
-		{
+		for (t = 0 ; text_content[t] ;)
 			t++;
-		}
-		f = write(c, text_content, t);
-		if (f == -1)
-		{
-			close(c);
-			return (-1);
-		}
+	}
+	c = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	f = write(c, text_content, t);
+
+	if (c == -1 || f == -1)
+	{
+		return (-1);
 	}
 	close(c);
 	return (1);
